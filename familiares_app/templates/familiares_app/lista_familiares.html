@@ -5,12 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            font-family: arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 6px;
+        }
+    </style>
+    
 </head>
 <body>
-    <ul>
+    <h2>Listado de mis familiares</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
         {% for familiar in familiares %}
-            <li>{{familiar.nombre}},{{familiar.edad}}</li>
+            <tr>
+                <td>{{familiar.nombre}}</td><td>{{familiar.edad}}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>  
 </body>
 </html>
